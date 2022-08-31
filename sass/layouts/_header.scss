@@ -1,0 +1,90 @@
+.header {
+  border-bottom: $borderDef #ececec;
+
+  &__container {
+    @include flex(flex, space-between, null);
+  }
+}
+
+.navigation {
+  display: flex;
+}
+
+.pages {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    @extend %link;
+    position: relative;
+    @include font(500, null, 1.14, 0.02em);
+    color: inherit;
+
+    display: block;
+    padding: 32px 2px 32px 2px;
+
+    &--current {
+      color: var(--accent-color);
+    }
+
+    &--current::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: currentColor;
+
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+    }
+
+    &:not(&--current)::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+
+      transform: scaleX(0);
+      transition: transform var(--transition-timing);
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    @extend %link;
+    @include font(500, null, 1.14, 0.02em);
+    @include flex(flex, null, center);
+
+    padding: 32px 0px;
+    font-style: normal;
+    color: var(--minor-color);
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+    transition: fill var(--transition-timing);
+  }
+}

@@ -1,0 +1,119 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.container--with-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.left-footer {
+  margin-right: 70px;
+  flex-grow: 1;
+}
+
+.address {
+  margin-top: 20px;
+
+  &__item:nth-child(n + 2) {
+    margin-top: 9px;
+  }
+  &__map {
+    @extend %link;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--normal-color);
+  }
+
+  &__mail-and-tel {
+    @extend %link;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.call {
+  margin-right: 93px;
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--normal-color);
+  }
+}
+
+.social__item .social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  fill: var(--normal-color);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &:hover,
+  &:focus {
+    background-color: currentColor;
+  }
+}
+
+.subscription {
+  display: flex;
+  gap: 12px;
+
+  &__input {
+    min-width: 358px;
+    height: 50px;
+    padding: 15px 0px 15px 15px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: var(--normal-color);
+
+    transition: border-color var(--transition-timing);
+
+    &:focus {
+      border-color: var(--normal-color);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &__button {
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--normal-color);
+    background-color: var(--accent-color);
+    min-width: 200px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,48 @@
+.team {
+  text-align: center;
+  display: flex;
+  column-gap: $gap;
+
+  &__item {
+    flex-basis: calc((100% - 3 * $gap) / 4);
+    background-color: var(--normal-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__wrapper {
+    padding: 30px 0px;
+  }
+
+  &__title {
+    @include font(500, 16px, 1.19, 0.03em);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include font(null, 16px, 1.19, 0.03em);
+    margin-bottom: 16px;
+    color: var(--minor-color);
+  }
+}
+
+.social {
+  @include flex(flex, center, null);
+  gap: 10px;
+
+  &__link {
+    @extend %link;
+    @include flex(flex, center, center);
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    fill: var(--color-deco);
+
+    &:hover,
+    &:focus {
+      fill: var(--normal-color);
+      background-color: currentColor;
+    }
+  }
+}

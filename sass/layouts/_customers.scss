@@ -1,0 +1,24 @@
+.customers {
+  @include flex(flex, center, null);
+  gap: $gap;
+
+  &__item {
+    width: calc((100% - 5 * $gap) / 6);
+    height: 92px;
+  }
+
+  &__link {
+    @extend %link;
+    @include flex(flex, center, center);
+    fill: var(--color-deco);
+    width: 100%;
+    height: 100%;
+    border: $borderDef var(--color-deco);
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent-color);
+    }
+  }
+}

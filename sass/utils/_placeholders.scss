@@ -1,0 +1,14 @@
+%link {
+  text-decoration: none;
+  color: currentColor;
+  font-size: 14px;
+
+  transition: color var(--transition-timing), background-color var(--transition-timing),
+    border-color var(--transition-timing), box-shadow var(--transition-timing),
+    fill var(--transition-timing);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}

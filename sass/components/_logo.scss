@@ -1,0 +1,19 @@
+.logo {
+  @include font(700, 26px, 1.2, 0.03em);
+  font-family: 'Raleway';
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &__dark {
+    color: #000000;
+  }
+
+  &__light {
+    color: var(--normal-color);
+  }
+}
+
+.navigation__logo {
+  padding-top: 24px;
+  margin-right: 93px;
+}

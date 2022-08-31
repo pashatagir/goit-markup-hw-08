@@ -1,0 +1,64 @@
+.examples {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  &__item {
+    flex-basis: calc((100% - 2 * $gap) / 3);
+    background-color: var(--normal-color);
+  }
+
+  &__link {
+    @extend %link;
+    display: block;
+    &:hover,
+    &:focus {
+      color: inherit;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__title {
+    @include font(null, 18px, 2, 0.06em);
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    @include font(null, 16px, 1.88, 0.03em);
+    color: var(--minor-color);
+  }
+
+  &__box {
+    padding: 20px 24px 20px 24px;
+    border: $borderDef #eeeeee;
+    border-top: none;
+  }
+
+  /* hidden overlay*/
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    @include font(null, 18px, 1.6, 0.03em);
+    height: 100%;
+    padding: 63px 24px;
+
+    color: var(--normal-color);
+    background-color: rgba(33, 150, 243, 0.9);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform var(--transition-timing);
+
+    .examples__link:hover &,
+    .examples__link:focus & {
+      transform: translateY(0%);
+    }
+  }
+}
