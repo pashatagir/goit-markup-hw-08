@@ -1,18 +1,35 @@
 .team {
   text-align: center;
   display: flex;
-  column-gap: $gap;
+  flex-direction: column;
+  gap: $gap;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include desctop {
+    flex-direction: row;
+  }
 
   &__item {
-    flex-basis: calc((100% - 3 * $gap) / 4);
+    width: 100%;
     background-color: var(--normal-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    @include tablet {
+      flex-basis: calc((100% - $gap) / 2);
+    }
+    @include desctop {
+      flex-basis: calc((100% - 3 * $gap) / 4);
+    }
   }
 
   &__wrapper {
-    padding: 30px 0px;
+    padding: 30px 0px 24px 0px;
+    @include desctop {
+      padding: 30px 0px;
+    }
   }
 
   &__title {

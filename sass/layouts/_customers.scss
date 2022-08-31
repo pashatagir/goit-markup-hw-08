@@ -1,10 +1,21 @@
 .customers {
-  @include flex(flex, center, null);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: $gap;
+  @include desctop {
+    justify-content: center;
+  }
 
   &__item {
-    width: calc((100% - 5 * $gap) / 6);
+    flex-basis: calc((100% - $gap) / 2);
     height: 92px;
+    @include tablet {
+      flex-basis: calc((100% - 2 * $gap) / 3);
+    }
+    @include desctop {
+      flex-basis: calc((100% - 5 * $gap) / 6);
+    }
   }
 
   &__link {

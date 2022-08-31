@@ -1,12 +1,18 @@
 .examples {
-  margin-top: 50px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: $gap;
+  @include desctop {
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
 
   &__item {
-    flex-basis: calc((100% - 2 * $gap) / 3);
-    background-color: var(--normal-color);
+    width: 100%;
+    @include desctop {
+      flex-basis: calc((100% - 2 * $gap) / 3);
+      background-color: var(--normal-color);
+    }
   }
 
   &__link {
