@@ -121,15 +121,13 @@
   }
   &__button {
     @include font(null, null, 1.88, 0.06em);
+    @include flex(flex, center, center);
+    gap: 10px;
     color: var(--normal-color);
     background-color: var(--accent-color);
     min-width: 200px;
     margin: 20px auto 0px;
     padding: 10px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     @include desktop {
       margin: 0;
     }

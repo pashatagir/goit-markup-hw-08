@@ -567,25 +567,55 @@ img {
 }
 
 .hero {
-  width: 1600px;
+  width: 320px;
   margin: auto;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/heroback.jpg), #2f303a;
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroback.jpg), #2f303a;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
-  padding: 200px 0px;
+  padding: 118px 0px;
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    padding: 200px 0px;
+  }
 }
 .hero__title {
-  max-width: 696px;
+  max-width: 290px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   margin: 0 auto;
   margin-bottom: 30px;
   text-transform: uppercase;
   color: var(--normal-color);
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
 }
 .hero__button {
   line-height: 1.88;
@@ -593,7 +623,12 @@ img {
   color: var(--normal-color);
   background-color: var(--accent-color);
   padding: 10px 32px 10px 32px;
-  min-width: 216px;
+  min-width: 200px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    min-width: 216px;
+  }
 }
 
 .benefits {
@@ -1061,11 +1096,6 @@ img {
 .subscription__button {
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: var(--normal-color);
-  background-color: var(--accent-color);
-  min-width: 200px;
-  margin: 20px auto 0px;
-  padding: 10px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1076,6 +1106,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  color: var(--normal-color);
+  background-color: var(--accent-color);
+  min-width: 200px;
+  margin: 20px auto 0px;
+  padding: 10px 0px;
 }
 @media screen and (min-width: 1200px) {
   .subscription__button {
