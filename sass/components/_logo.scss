@@ -1,9 +1,11 @@
 .logo {
-  @include font(700, 26px, 1.2, 0.03em);
+  @include font(700, 24px, 1.2, 0.03em);
   font-family: 'Raleway';
   color: var(--accent-color);
   text-decoration: none;
-
+  @include desktop {
+    font-size: 26px;
+  }
   &__dark {
     color: #000000;
   }

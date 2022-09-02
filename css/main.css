@@ -442,12 +442,17 @@ img {
 
 .logo {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   font-family: "Raleway";
   color: var(--accent-color);
   text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 .logo__dark {
   color: #000000;
@@ -869,53 +874,91 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.container--with-flex {
+.footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-column-gap: 165px;
+       -moz-column-gap: 165px;
+            column-gap: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    text-align: left;
+    gap: 0;
+  }
 }
 
-.left-footer {
-  margin-right: 70px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+@media screen and (min-width: 1200px) {
+  .left-footer {
+    margin-right: 70px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .address {
   margin-top: 20px;
 }
 .address__item:nth-child(n+2) {
-  margin-top: 9px;
+  margin-top: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .address__item:nth-child(n+2) {
+    margin-top: 9px;
+  }
 }
 .address__map {
-  font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  font-style: normal;
   color: var(--normal-color);
 }
 .address__mail-and-tel {
-  font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  font-style: normal;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.call {
-  margin-right: 93px;
+@media screen and (min-width: 1200px) {
+  .call {
+    margin-right: 93px;
+  }
 }
 .call__title {
   font-weight: 700;
-  margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--normal-color);
+  margin-bottom: 20px;
 }
 
 .social__item .social__link {
@@ -938,27 +981,39 @@ img {
   background-color: currentColor;
 }
 
-.subscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 12px;
+@media screen and (min-width: 1200px) {
+  .subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+  }
 }
 .subscription__input {
-  min-width: 358px;
+  min-width: 290px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
   height: 50px;
   padding: 15px 0px 15px 15px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   outline: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
   color: var(--normal-color);
   -webkit-transition: border-color var(--transition-timing);
   transition: border-color var(--transition-timing);
+}
+@media screen and (min-width: 480px) {
+  .subscription__input {
+    min-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__input {
+    min-width: 358px;
+  }
 }
 .subscription__input:focus {
   border-color: var(--normal-color);
@@ -1009,6 +1064,7 @@ img {
   color: var(--normal-color);
   background-color: var(--accent-color);
   min-width: 200px;
+  margin: 20px auto 0px;
   padding: 10px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1020,6 +1076,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__button {
+    margin: 0;
+  }
 }
 
 .filters {
@@ -1087,8 +1148,6 @@ img {
 @media screen and (min-width: 1200px) {
   .examples {
     margin-top: 50px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 }
 .examples__item {

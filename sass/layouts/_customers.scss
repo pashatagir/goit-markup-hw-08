@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: $gap;
-  @include desctop {
+  @include desktop {
     justify-content: center;
   }
 
@@ -13,7 +13,7 @@
     @include tablet {
       flex-basis: calc((100% - 2 * $gap) / 3);
     }
-    @include desctop {
+    @include desktop {
       flex-basis: calc((100% - 5 * $gap) / 6);
     }
   }

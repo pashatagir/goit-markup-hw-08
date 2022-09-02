@@ -2,59 +2,73 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-}
 
-.container--with-flex {
-  display: flex;
-  align-items: baseline;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      column-gap: 165px;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+      text-align: left;
+      gap: 0;
+    }
+  }
 }
 
 .left-footer {
-  margin-right: 70px;
-  flex-grow: 1;
+  @include desktop {
+    margin-right: 70px;
+    flex-grow: 1;
+  }
 }
 
 .address {
   margin-top: 20px;
 
   &__item:nth-child(n + 2) {
-    margin-top: 9px;
+    margin-top: 8px;
+    @include desktop {
+      margin-top: 9px;
+    }
   }
   &__map {
     @extend %link;
+    @include font(null, null, 1.71, 0.03em);
     font-style: normal;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
     color: var(--normal-color);
   }
 
   &__mail-and-tel {
     @extend %link;
+    @include font(null, null, 1.71, 0.03em);
     font-style: normal;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
 }
 
 .call {
-  margin-right: 93px;
+  @include desktop {
+    margin-right: 93px;
+  }
 
   &__title {
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--normal-color);
+    margin-bottom: 20px;
   }
 }
 
 .social__item .social__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(flex, center, center);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -68,24 +82,28 @@
 }
 
 .subscription {
-  display: flex;
-  gap: 12px;
+  @include desktop {
+    display: flex;
+    gap: 12px;
+  }
 
   &__input {
-    min-width: 358px;
+    min-width: 290px;
+    @include font(400, 16px, 1.25, 0.03em);
     height: 50px;
     padding: 15px 0px 15px 15px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     outline: none;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
     color: var(--normal-color);
-
     transition: border-color var(--transition-timing);
+    @include mobile {
+      min-width: 450px;
+    }
+    @include desktop {
+      min-width: 358px;
+    }
 
     &:focus {
       border-color: var(--normal-color);
@@ -97,23 +115,23 @@
     }
 
     &::placeholder {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.25;
-      letter-spacing: 0.03em;
+      @include font(400, 16px, 1.25, 0.03em);
       color: rgba(255, 255, 255, 0.6);
     }
   }
   &__button {
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font(null, null, 1.88, 0.06em);
     color: var(--normal-color);
     background-color: var(--accent-color);
     min-width: 200px;
+    margin: 20px auto 0px;
     padding: 10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    @include desktop {
+      margin: 0;
+    }
   }
 }
