@@ -67,19 +67,28 @@
 
 .contacts {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include desktop {
+    flex-direction: row;
+  }
 
   &__item:not(:last-child) {
-    margin-right: 50px;
+    @include desktop {
+      margin-right: 50px;
+    }
   }
 
   &__link {
     @extend %link;
     @include font(500, null, 1.14, 0.02em);
     @include flex(flex, null, center);
-
-    padding: 32px 0px;
     font-style: normal;
     color: var(--minor-color);
+    padding: 5px 0px;
+    @include desktop {
+      padding: 32px 0px;
+    }
   }
 
   &__icon {
