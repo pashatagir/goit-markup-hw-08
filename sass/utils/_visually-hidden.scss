@@ -25,8 +25,23 @@
     margin: -1px;
   }
 }
-.header {
+.pages,
+.contacts {
   @media screen and (max-width: 767px) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+}
+.navigation__mobile {
+  @include tablet {
     position: absolute;
     white-space: nowrap;
     width: 1px;

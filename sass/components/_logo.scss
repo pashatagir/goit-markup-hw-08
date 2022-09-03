@@ -1,5 +1,5 @@
 .logo {
-  @include font(700, 24px, 1.2, 0.03em);
+  @include font(700, 24px, 1.17, 0.03em);
   font-family: 'Raleway';
   color: var(--accent-color);
   text-decoration: none;
@@ -16,6 +16,9 @@
 }
 
 .navigation__logo {
-  padding-top: 24px;
-  margin-right: 93px;
+  padding: 16px 0px;
+  @include tablet {
+    padding-top: 24px;
+    margin-right: 93px;
+  }
 }

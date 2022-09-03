@@ -1,13 +1,49 @@
 .header {
   border-bottom: $borderDef #ececec;
+  position: relative;
 
   &__container {
-    @include flex(flex, space-between, null);
+    @include tablet {
+      @include flex(flex, space-between, null);
+    }
   }
 }
 
 .navigation {
-  display: flex;
+  @include flex(flex, space-between, center);
+  @include tablet {
+    @include flex(null, flex-start, stretch);
+  }
+  &__button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    & .close-menu {
+      display: none;
+    }
+    &.is-open .close-menu {
+      display: block;
+    }
+    &.is-open .open-menu {
+      display: none;
+    }
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+  &__box {
+    display: none;
+    background-color: var(--normal-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    &.is-open {
+      display: block;
+    }
+  }
 }
 
 .pages {

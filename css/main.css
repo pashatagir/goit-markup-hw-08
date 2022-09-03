@@ -347,7 +347,24 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .header {
+  .pages,
+.contacts {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    margin: -1px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__mobile {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -470,7 +487,7 @@ img {
 .logo {
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   font-family: "Raleway";
   color: var(--accent-color);
@@ -489,26 +506,81 @@ img {
 }
 
 .navigation__logo {
-  padding-top: 24px;
-  margin-right: 93px;
+  padding: 16px 0px;
+}
+@media screen and (min-width: 768px) {
+  .navigation__logo {
+    padding-top: 24px;
+    margin-right: 93px;
+  }
 }
 
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+.navigation__button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.navigation__button .close-menu {
+  display: none;
+}
+.navigation__button.is-open .close-menu {
+  display: block;
+}
+.navigation__button.is-open .open-menu {
+  display: none;
+}
+.navigation__button:hover, .navigation__button:focus {
+  fill: var(--accent-color);
+}
+.navigation__box {
+  display: none;
+  background-color: var(--normal-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.navigation__box.is-open {
+  display: block;
 }
 
 .pages {
