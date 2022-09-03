@@ -23,44 +23,6 @@
             </li>
             <li class="pages__item"><a href="#" class="pages__link">Контакти</a></li>
           </ul>
-          <div class="navigation__mobile">
-            <button type="button" class="navigation__button" aria-expanded="false" data-menu-button>
-              <svg width="40" height="40" aria-label="mobile menu switch">
-                <use class="close-menu" href="./images/symbol-defso.svg#icon-close-menu"></use>
-                <use class="open-menu" href="./images/symbol-defso.svg#icon-open-menu"></use>
-              </svg>
-            </button>
-            <div class="navigation__box" data-menu>
-              <ul class="">
-                <li class="">
-                  <a href="./index.html" class="">Студія</a>
-                </li>
-                <li class="">
-                  <a href="./portfolio.html" target="_parent" class="">Портфоліо</a>
-                </li>
-                <li class=""><a href="#" class="">Контакти</a></li>
-              </ul>
-              <ul class="">
-                <li class="">
-                  <a href="mailto:info@devstudio.com" lang="en" class="">
-                    <svg class="" width="16" height="12">
-                      <use href="./images/symbol-defso.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com</a
-                  >
-                </li>
-                <li class="">
-                  <a href="tel:+380961111111" class="">
-                    <svg class="" width="10" height="16">
-                      <use href="./images/symbol-defso.svg#icon-smartphone"></use>
-                    </svg>
-
-                    +38 096 111 11 11</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
         </nav>
         <ul class="contacts">
           <li class="contacts__item">
@@ -82,6 +44,82 @@
           </li>
         </ul>
       </div>
+      <nav class="navigation__mobile">
+        <a href="./index.html" lang="en" class="logo navigation__logo"
+          >Web<span class="logo__dark">Studio</span></a
+        >
+        <button
+          type="button"
+          class="navigation__button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="mobile-menu-switch">
+            <use class="close-menu" href="./images/symbol-defso.svg#icon-close-menu"></use>
+            <use class="open-menu" href="./images/symbol-defso.svg#icon-open-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile__menu" id="menu-container" data-menu>
+          <ul class="mobile__list">
+            <li class="mobile__pages">
+              <a href="./index.html" class="mobile__link mobile__link--current">Студія</a>
+            </li>
+            <li class="mobile__pages">
+              <a href="./portfolio.html" target="_parent" class="mobile__link">Портфоліо</a>
+            </li>
+            <li class="mobile__pages"><a href="#" class="mobile__link">Контакти</a></li>
+          </ul>
+          <ul class="">
+            <li class="mobile__contacts">
+              <a href="tel:+380961111111" class="mobile__link--tel"> +38 096 111 11 11</a>
+            </li>
+            <li class="mobile__contacts">
+              <a href="mailto:info@devstudio.com" lang="en" class="mobile__link--mail">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile__soclist">
+            <li class="mobile__socitem">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer nofollov"
+                class="mobile__soclink"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile__socitem">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer nofollov"
+                class="mobile__soclink"
+                >Twitter</a
+              >
+            </li>
+            <li class="mobile__socitem">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer nofollov"
+                class="mobile__soclink"
+                >Facebook</a
+              >
+            </li>
+            <li class="mobile__socitem">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer nofollov"
+                class="mobile__soclink"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
       <section class="hero">

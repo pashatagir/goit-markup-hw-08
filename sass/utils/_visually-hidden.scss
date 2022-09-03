@@ -25,8 +25,7 @@
     margin: -1px;
   }
 }
-.pages,
-.contacts {
+.header__container {
   @media screen and (max-width: 767px) {
     position: absolute;
     white-space: nowrap;

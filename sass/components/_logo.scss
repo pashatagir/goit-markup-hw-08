@@ -19,6 +19,9 @@
   padding: 16px 0px;
   @include tablet {
     padding-top: 24px;
+    margin-right: 87px;
+  }
+  @include desktop {
     margin-right: 93px;
   }
 }
