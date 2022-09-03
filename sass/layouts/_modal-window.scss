@@ -15,9 +15,9 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
-  padding: 40px;
+  width: 290px;
+  min-height: 449px;
+  padding: 15px;
   background-color: var(--normal-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -26,6 +26,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include mobile {
+    width: 450px;
+    min-height: 609px;
+    padding: 40px;
+  }
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
 
   &__button {
     @include flex(flex, center, center);
@@ -54,12 +63,21 @@
 }
 
 .form {
-  width: 448px;
+  width: 260px;
+  @include mobile {
+    width: 370px;
+  }
+  @include desktop {
+    width: 448px;
+  }
 
   &__title {
-    @include font(700, 20px, 1.15, 0.03em);
+    @include font(700, 20px, 1.5, 0.03em);
     margin-bottom: 12px;
     text-align: center;
+    @include desktop {
+      line-height: 1.15;
+    }
   }
 
   &__field:not(:nth-child(5)) {
@@ -143,11 +161,14 @@
 }
 
 .check {
-  @include font(null, 14px, 1.71, 0.03em);
+  @include font(null, 12px, 1.17, 0.03em);
   @include flex(flex, center, center);
   position: relative;
   margin-bottom: 30px;
   color: var(--minor-color);
+  @include desktop {
+    @include font(null, 14px, 1.71, 0.03em);
+  }
 
   &__span {
     position: relative;

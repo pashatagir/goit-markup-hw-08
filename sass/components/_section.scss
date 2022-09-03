@@ -12,9 +12,4 @@
   &--another-background {
     background-color: var(--secondary-color);
   }
-  &--only-on-desctop {
-    @media screen and (max-width: 1199px) {
-      display: none;
-    }
-  }
 }
