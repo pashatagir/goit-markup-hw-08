@@ -1,20 +1,33 @@
 .hero {
-  width: 320px;
+  max-width: 1600px;
   margin: auto;
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/heroback.jpg), #2f303a;
+    url(../images/hero-bg-image-mob.jpg), #2f303a;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   text-align: center;
   padding: 118px 0px;
-  @include mobile {
-    width: 480px;
+  @include pixelRatio2x {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-image-mob-2x.jpg);
   }
+
   @include tablet {
-    width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-image-tablet.jpg);
+    @include pixelRatio2x {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-image-tablet-2x.jpg);
+    }
   }
   @include desktop {
-    width: 100%;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-image.jpg);
+    @include pixelRatio2x {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-image-2x.jpg);
+    }
     padding: 200px 0px;
   }
 

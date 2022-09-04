@@ -163,9 +163,13 @@
 .check {
   @include font(null, 12px, 1.17, 0.03em);
   @include flex(flex, center, center);
+  flex-wrap: wrap;
   position: relative;
   margin-bottom: 30px;
   color: var(--minor-color);
+  @include mobile {
+    flex-wrap: nowrap;
+  }
   @include desktop {
     @include font(null, 14px, 1.71, 0.03em);
   }
