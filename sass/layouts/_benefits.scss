@@ -38,10 +38,9 @@
     @include tablet {
       text-align: left;
     }
-
-    &__text {
-      @include font(null, 14px, 1.71, 0.03em);
-      color: var(--minor-color);
-    }
+  }
+  &__text {
+    @include font(null, 14px, 1.71, 0.03em);
+    color: var(--minor-color);
   }
 }

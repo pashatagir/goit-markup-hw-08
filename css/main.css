@@ -980,7 +980,7 @@ img {
     text-align: left;
   }
 }
-.benefits__title__text {
+.benefits__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -1560,6 +1560,7 @@ img {
 }
 
 .backdrop {
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
